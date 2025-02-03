@@ -11,8 +11,13 @@ class Solution:
             leftProd.append(leftProd[i] * nums[i])
         for j in range(len(nums)-2, -1, -1):
             rightProd[j] =  rightProd[j+1] * nums[j+1]
-        answer = []
-        for idx in range(len(nums)):
-            answer.append(leftProd[idx] * rightProd[idx])
+        answer = [0] * len(nums)
+        l = 0
+        r = len(nums) - 1
+        while l <= r:
+            answer[l] = leftProd[l] * rightProd[l]
+            answer[r] = leftProd[r] * rightProd[r] 
+            l+=1
+            r-=1
         
         return answer
