@@ -8,8 +8,8 @@ class Solution:
         
 
         winSum = sum(nums[:k])
-        maxVal = Decimal(winSum) / Decimal(k)
+        maxVal = Decimal(winSum)
         for i in range(k, len(nums)) :
             winSum += (nums[i] - nums[i-k])
-            maxVal = max(maxVal, Decimal(winSum)/Decimal(k))
-        return float(round(maxVal,5))
+            maxVal = max(maxVal, Decimal(winSum))
+        return float(round(maxVal/k,5))
