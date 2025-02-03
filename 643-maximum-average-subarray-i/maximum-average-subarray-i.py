@@ -1,7 +1,7 @@
 from decimal import Decimal, getcontext
 class Solution:
     def findMaxAverage(self, nums: List[int], k: int) -> float:
-        getcontext().prec = 20
+        getcontext().prec = 10
         if len(nums) == k:
             res = Decimal(sum(nums)) / Decimal(len(nums))
             return res
