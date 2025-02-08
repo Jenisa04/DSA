@@ -10,7 +10,6 @@ class Solution:
 
         dummy = head       
         while head.next:
-            print(head.val)
             if head.val == head.next.val:
                 temp = head.next
                 head.next = temp.next
