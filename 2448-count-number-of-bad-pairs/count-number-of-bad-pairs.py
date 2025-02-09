@@ -1,5 +1,6 @@
 import math
 class Solution:
+    # Jenisa
     def countBadPairs(self, nums: List[int]) -> int:
         # j - i != nums[j] - nums[i] ==> 
         # ==> nums[i] - i != nums[j] - j
@@ -13,9 +14,9 @@ class Solution:
                 if nums[i] -i not in count:
                     count.append(nums[i] - i)
 
-        numGoodPairs = 0
-        for j in count:
-            numGoodPairs += math.comb(diff[j],2)
         totalPairs = math.comb(len(nums), 2)
+        for j in count:
+            totalPairs -= math.comb(diff[j],2)
+        
 
-        return totalPairs - numGoodPairs
+        return totalPairs
