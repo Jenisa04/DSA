@@ -15,9 +15,8 @@ class Solution:
                 if nums[i] -i not in count:
                     count.append(nums[i] - i)
 
-        totalPairs = math.comb(len(nums), 2)
+        totalPairs = (len(nums) * (len(nums) - 1)) // 2
         for j in count:
             totalPairs -= math.comb(diff[j],2)
         
-
         return totalPairs
