@@ -1,5 +1,5 @@
 class ProductOfNumbers:
-
+    # Jenisa
     def __init__(self):
         self.nums = [1]
 
@@ -16,8 +16,7 @@ class ProductOfNumbers:
         else:
             num1 = self.nums[len(self.nums) - 1 - k]
             num2 = self.nums[-1]
-            res = num2/num1
-            return int(res)
+            return int(num2/num1)
 
 
 # Your ProductOfNumbers object will be instantiated and called as such:
