@@ -13,10 +13,8 @@ class ProductOfNumbers:
     def getProduct(self, k: int) -> int:
         if k >= len(self.nums):
             return 0
-        else:
-            num1 = self.nums[len(self.nums) - 1 - k]
-            num2 = self.nums[-1]
-            return int(num2/num1)
+        else: 
+            return int(self.nums[-1]/self.nums[len(self.nums) - 1 - k])
 
 
 # Your ProductOfNumbers object will be instantiated and called as such:
