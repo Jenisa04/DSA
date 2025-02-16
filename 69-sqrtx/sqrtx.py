@@ -2,7 +2,7 @@ class Solution:
     # Jenisa
     def mySqrt(self, x: int) -> int:
         l = 0
-        r = x
+        r = x//2 +1
         while l<=r:
             m = l + (r-l) // 2
             sq = m*m
