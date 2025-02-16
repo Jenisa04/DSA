@@ -1,6 +1,11 @@
 class Solution:
     # Jenisa
     def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
-        missing = set(range(1,len(nums)+1)) - set(nums)
+        atP = set(nums)
+        missing = []
 
-        return list(missing)
+        for i in range(1, len(nums)+1):
+            if i not in atP:
+                missing.append(i)
+
+        return missing
