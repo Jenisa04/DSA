@@ -1,5 +1,7 @@
 class Solution:
+    # Jenisa
     def minTimeToVisitAllPoints(self, points: List[List[int]]) -> int:
+        # Chebyshev distance
         res = 0
         for idx in range(len(points)-1):
             p1 = abs(points[idx][0] - points[idx+1][0])
