@@ -4,6 +4,5 @@ class Solution:
         # k(k+1)//2 = n
         # restructuring this to get
         # (-1+(1+8n)**(1/2)) // 2
-        temp = int((-1 + (1+8*n)**(1/2)) // 2)
-        return temp
+        return int((-1 + (1+8*n)**(1/2)) // 2)
         
