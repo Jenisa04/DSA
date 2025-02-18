@@ -1,11 +1,9 @@
 class Solution:
     def arrangeCoins(self, n: int) -> int:
-        total = n
-        i = 1
-        rowCount = 0
-        while total>=0:
-            total -= i
-            i+=1
-            rowCount+=1
+        # sum of int 1 to n formula:
+        # k(k+1)//2 = n
+        # restructuring this to get
+        # (-1+(1+8n)**(1/2)) // 2
+        temp = int((-1 + (1+8*n)**(1/2)) // 2)
+        return temp
         
-        return rowCount-1
