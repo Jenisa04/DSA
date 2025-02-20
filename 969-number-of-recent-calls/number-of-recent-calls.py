@@ -1,7 +1,8 @@
+from collections import deque
 class RecentCounter:
 
     def __init__(self):
-        self.queue = []
+        self.queue = deque()
     
     def ping(self, t: int) -> int:
         if not self.queue:
@@ -9,19 +10,9 @@ class RecentCounter:
             return 1
         else:
             self.queue.append(t)
-            count = 0
-            idxToDel = -1
-            for idx in range(len(self.queue)-1, -1, -1):
-                if self.queue[idx] in range(t-3000, t+1):
-                    count+=1
-                else:
-                    idxToDel = idx
-                    break
-                    
-            if idxToDel >= 0:
-                self.queue = self.queue[idxToDel+1:]
-            
-            return count
+            while self.queue[0] < t-3000:
+                self.queue.popleft()
+            return len(self.queue)
 
 
 # Your RecentCounter object will be instantiated and called as such:
