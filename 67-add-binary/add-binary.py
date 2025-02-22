@@ -1,7 +1,7 @@
 class Solution:
     # Jenisa
     def addBinary(self, a: str, b: str) -> str:
-        res = []
+        res = ""
         i = len(a)-1
         j = len(b)-1
         carry = 0
@@ -13,7 +13,7 @@ class Solution:
             if j>=0:
                 carry+=int(b[j])
                 j-=1
-            res.append(str(carry%2))
+            res = str(carry%2)+res
             carry//=2
         
-        return ''.join(reversed(res))
+        return res
