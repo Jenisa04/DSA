@@ -8,15 +8,14 @@ class Solution:
             return round(math.log(n) / math.log(3), 10)
         
         res = []
-        num = n
-        while num>0:
-            logNum = int(logarithm(num))
+        while n>0:
+            logNum = int(logarithm(n))
             if logNum not in res:
                 res.append(logNum)
             else:
                 return False
 
             sub = pow(3, res[-1])
-            num -= sub
+            n -= sub
         
         return True
