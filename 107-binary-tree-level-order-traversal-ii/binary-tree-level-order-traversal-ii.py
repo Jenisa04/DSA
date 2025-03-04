@@ -25,6 +25,6 @@ class Solution:
                 if node.right:
                     q.append(node.right)
 
-            res.insert(0, temp)
+            res.append(temp)
 
-        return res
+        return res[::-1]
