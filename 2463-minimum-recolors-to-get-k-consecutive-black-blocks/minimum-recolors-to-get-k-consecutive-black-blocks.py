@@ -12,8 +12,11 @@ class Solution:
             minCtr = 101
             for i in range(n-k+1):
                 blocksCtr = Counter(blocks[i:i+k])
+                if blocksCtr['W'] == 0:
+                    return 0
                 if blocksCtr['W'] < minCtr:
                     minCtr = blocksCtr['W']
+                
             count = minCtr  
         
         return count
