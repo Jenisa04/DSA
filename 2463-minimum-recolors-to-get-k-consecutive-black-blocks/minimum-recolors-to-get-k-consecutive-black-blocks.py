@@ -14,8 +14,7 @@ class Solution:
                 blocksCtr = Counter(blocks[i:i+k])
                 if blocksCtr['W'] == 0:
                     return 0
-                if blocksCtr['W'] < minCtr:
-                    minCtr = blocksCtr['W']
+                minCtr = min(minCtr, blocksCtr['W'])
                 
             count = minCtr  
         
